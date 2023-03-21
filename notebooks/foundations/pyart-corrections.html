@@ -26,9 +26,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
@@ -42,7 +42,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -218,6 +218,11 @@ const thebe_selector_output = ".output, .cell_output"
    Plotting Data from a Field Campaign (TRACER)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../example-workflows/cacti-data-quality-example.html">
+   Data Quality Check from the CACTI Field Campaign
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -299,7 +304,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://aws-uswest2-binder.pangeo.io//v2/gh/ProjectPythiaTutorials/radar-cookbook/main?urlpath=lab/tree/notebooks/foundations/pyart-corrections.ipynb"><button type="button"
+        <a class="binder-button" href="http://binder.mypythia.org/v2/gh/ProjectPythiaTutorials/radar-cookbook/main?urlpath=lab/tree/notebooks/foundations/pyart-corrections.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -460,7 +465,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Within this notebook, we will cover:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Intro to radar aliasing.</p></li>
 <li><p>Calculation of velocity texture using Py-ART</p></li>
 <li><p>Dealiasing the velocity field</p></li>
@@ -580,7 +585,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pyart-corrections_9_0.png" src="../../_images/pyart-corrections_9_0.png" />
+<img alt="../../_images/7844f489253629effacf931fa0545936f11f1fc134b1fb8ad9e6dc76513bf37e.png" src="../../_images/7844f489253629effacf931fa0545936f11f1fc134b1fb8ad9e6dc76513bf37e.png" />
 </div>
 </div>
 </div>
@@ -667,18 +672,18 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
  &#39;standard_name&#39;: &#39;texture_of_radial_velocity_of_scatters_away_from_instrument&#39;,
  &#39;long_name&#39;: &#39;Doppler velocity texture&#39;,
  &#39;coordinates&#39;: &#39;elevation azimuth range&#39;,
- &#39;data&#39;: array([[6.69862024, 6.03811779, 5.67650537, ..., 5.84680145, 5.87766469,
+ &#39;data&#39;: array([[7.51300375, 6.08543553, 5.92741611, ..., 5.84680145, 5.87766469,
          5.8796826 ],
-        [6.69862024, 6.0757411 , 5.67650537, ..., 5.84680145, 5.87766469,
+        [7.51300375, 5.92741611, 5.52273606, ..., 5.84680145, 5.87766469,
          5.8796826 ],
-        [6.72440409, 6.0757411 , 5.67650537, ..., 5.94545992, 5.98767892,
+        [6.31927866, 5.92741611, 5.52273606, ..., 5.94545992, 5.98767892,
          5.99355426],
         ...,
-        [7.58128365, 7.43990786, 6.62367925, ..., 5.69339285, 5.64166993,
+        [7.28154521, 7.17077244, 5.99292346, ..., 5.69339285, 5.64166993,
          5.64166993],
-        [8.30812789, 8.30812789, 6.1530007 , ..., 5.48500863, 5.42860475,
+        [7.77209257, 7.77209257, 5.95091982, ..., 5.48500863, 5.42860475,
          5.42860475],
-        [8.39500845, 8.39500845, 5.96648377, ..., 2.32524392, 2.33743921,
+        [7.99320448, 7.99320448, 5.95091982, ..., 2.32524392, 2.33743921,
          2.3474649 ]])}
 </pre></div>
 </div>
@@ -711,7 +716,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pyart-corrections_26_0.png" src="../../_images/pyart-corrections_26_0.png" />
+<img alt="../../_images/9aa6baac5c26f3b17898a391f9bf1f32a5b1efe6b3d8d05ab8504d9b500b88a0.png" src="../../_images/9aa6baac5c26f3b17898a391f9bf1f32a5b1efe6b3d8d05ab8504d9b500b88a0.png" />
 </div>
 </div>
 </div>
@@ -739,10 +744,10 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f94e5f676a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f35e1575ac0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/pyart-corrections_29_1.png" src="../../_images/pyart-corrections_29_1.png" />
+<img alt="../../_images/6a63837e22f9cd341a3087c6f567f444de4ac0445ca70ee64dc87dd3acbea611.png" src="../../_images/6a63837e22f9cd341a3087c6f567f444de4ac0445ca70ee64dc87dd3acbea611.png" />
 </div>
 </div>
 </div>
@@ -757,7 +762,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pyart.filters.gatefilter.GateFilter at 0x7f94e5fb7070&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pyart.filters.gatefilter.GateFilter at 0x7f35e1545d60&gt;
 </pre></div>
 </div>
 </div>
@@ -812,7 +817,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pyart-corrections_37_0.png" src="../../_images/pyart-corrections_37_0.png" />
+<img alt="../../_images/457f3a961daeec0e6fa8c98f5ebf4fd609beb79c104f1d581105d37d968131d0.png" src="../../_images/457f3a961daeec0e6fa8c98f5ebf4fd609beb79c104f1d581105d37d968131d0.png" />
 </div>
 </div>
 </div>
@@ -855,7 +860,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pyart-corrections_43_0.png" src="../../_images/pyart-corrections_43_0.png" />
+<img alt="../../_images/5ce1a7e51c56932d52501bccf1c3103fef387ea2e205489a9270057ff73dc986.png" src="../../_images/5ce1a7e51c56932d52501bccf1c3103fef387ea2e205489a9270057ff73dc986.png" />
 </div>
 </div>
 </div>
@@ -901,7 +906,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/pyart-corrections_45_0.png" src="../../_images/pyart-corrections_45_0.png" />
+<img alt="../../_images/7a1417483dad9214ad0c29951dbb3c47a069e6383559e115c0e32356ac8ffd85.png" src="../../_images/7a1417483dad9214ad0c29951dbb3c47a069e6383559e115c0e32356ac8ffd85.png" />
 </div>
 </div>
 </div>
@@ -938,7 +943,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/foundations"
         },
         predefinedOutput: true
@@ -1008,7 +1013,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         
           By Max Grover, Zachary Sherman.
         
-          Last updated on 20 October 2022.
+          Last updated on 21 March 2023.
         </p>
       </div>
     </div>
